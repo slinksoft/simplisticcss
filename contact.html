@@ -1,0 +1,65 @@
+<html>
+    <head><link rel="stylesheet" href="normalize.css">
+        <title>My Portfolio - Contact</title>
+        <link rel="stylesheet" href="contact.css">
+        
+        <script language="JavaScript">
+      
+    function checkForm(form) {
+    // get all the inputs within the submitted form
+    var inputs = form.getElementsByTagName('input');
+    for (var i = 0; i < inputs.length; i++) {
+        // only validate the inputs that have the required attribute
+        if(inputs[i].hasAttribute("isrequired")){
+            if(inputs[i].value == ""){
+                // found an empty field that is required
+                alert("Please fill all required fields!");
+                return false;
+            }
+        }
+    }
+    return true;
+}
+    
+    </script>
+    </head>
+    
+    <body>
+        <section class="links">
+            
+            <div>
+            <h2>(name)'s Portfolio</h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="bio.html">Bio</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li id="selectedpage"><a href="contact.html">Contact</a></li>
+            </ul>
+            </div>
+        </section>
+        
+       
+            <section class="homecontent">
+            <div id="wrap">
+            <h2><u>Contact Me</u></h2>
+            <p>Have any questions? Contact me below!</p>
+            <!-- email form, using basic "mailto:" function. Three input forms are used: The name field, the email field (of the sender), and the email body/message itself. Will open the default email application on your OS. -->
+            <form action="mailto:youremail@emailservice.com" method="post" enctype="text/plain" onsubmit="return checkForm(this)"> <!-- Run javascript function when user clicks submit function to check if any input forms are empty -->
+            Name:<br>
+            <input type="text" name="name" isrequired><br>
+            E-mail:<br>
+            <input type="text" name="mail" isrequired><br>
+            Message:<br>
+            <input id="subjectline" type="text" name="message" size="10" isrequired><br><br>
+            <input type="submit" value="Send">
+            <input type="reset" value="Reset">
+</form>
+            </section>    
+        
+        <!-- DO NOT REMOVE -->
+         <section class="copyright">
+            Copyright 2018: Simplistic CSS v1.0 - <a href=https://realslinksoft.wixsite.com/slink-soft-portfolio target="_blank"> SlinkSoft</a> Webpage Designs - All Rights Reserved
+        </section>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,83 @@
+/* Use index for general comments */
+body{
+    height: 100%;
+    background: url("https://pixy.org/src/475/4751502.png"); /* edit the sites background here; whether it is an image or color */
+    color: #FFFFFF; /* the page's default font color */
+    font-size: 16px; /* the page's default font size */
+}
+section.links {
+    background: rgba(255, 0, 0, 0.5); /* rgba: red, green, blue, alpha. Alpha will control opacity. ex. 0.5 is 50% opacity */
+    width: 200px;
+    height: 80vh;
+    display: flex; /* using flex for sorting and putting together content*/
+    justify-content: center;
+    align-items: center;
+     border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    font-weight: bold;
+    transition-duration: 1s; /* transition delay for hover. 1 second*/
+    text-align: center;
+    
+}
+
+section.links:hover{
+    background: rgba(255, 0, 0);
+}
+
+section.links h2{
+    text-align: center;
+}
+section.links ul{
+    list-style-type: none;
+    margin-right: 50px;
+}
+
+section.links a{
+    color: white;
+    transition-duration: 0.5s; /* transition delay for hover. half a second */
+    text-decoration: none;
+}
+section.links a:hover{
+    color: black;
+}
+
+/* uses id to determine selected page for the links. Adds > < inbetween text link. After affects content after the mentioned content, before affects content before the mentioned content. */
+#selectedpage::after{
+    content: " <";
+    color: black;
+}
+
+#selectedpage::before{
+    content: "> ";
+    color: black;
+}
+
+#wrap{
+     padding-bottom: 2.5rem;    /* Footer height */
+}
+
+section.homecontent{
+    margin-top: -420px;
+    margin-left: 200px;
+    text-align: center;
+    position: relative;
+
+}
+
+section.copyright{
+ position: absolute;
+
+ text-align: center;
+ bottom: -5;
+  width: 100%;
+  height: 2.5rem;
+}
+
+section.copyright a{
+    color: aqua;
+    text-decoration: none;
+}
+section.copyright a:hover{
+    text-decoration: underline;
+}
